@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/* Lato */
+
+/* global selectors */
+
+.g-base {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    background-color: #2d2e3a;
+}
+
+.g-header {
+    border-top: 6px solid #93d1e9e8;
+    border-bottom: 6px solid #93d1e9e8;
+    background-color: #b3e9ecf5;
+
+    text-align: center;
+    font-size: 3rem;
+    font-family: "Lato", Helvetica, sans-serif;
+    padding-left: 5%;
+    width: 95%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.g-title {
+    background-color: #c6fbffcb;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    padding: 0.5% 2% 0.5% 2%;
+    color: darkblue;
+}
+
+.g-not-title {
+    background-color: #aaf9ffab;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    padding: 0.5% 2% 0.5% 2%;
+    color: #2f2fac;
+    text-decoration: none;
+}
+
+.g-not-title:hover {
+    color: #5d5ddd;
+    background-color: #d1fcffab;
+}
+
+.g-details {
+    font-size: 1.5rem;
+    color: #314350;
+    text-align: end;
+
+    align-self: center;
+    flex-grow: 1;
+    padding-right: 2%;
+
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header-aside"
+        "header-name"
+    ;
+}
+
+.g-details #header-aside {
+    grid-area: header-aside;
+}
+
+.g-details #header-name {
+    grid-area: header-name;
+    font-weight: bold;
+    color: #25333d;
+}
+
+/* page and section selectors */
+
+.p-home #s-welcome {
+    margin: 4% 15% 4% 15%;
+    border: 2px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    padding: 3% 5% 3% 5%;
+
+    color: black;
+    font-size: 1.5rem;
+
+    display: grid;
+    grid-template-rows: 0.5fr 1fr 1.5fr 1fr;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+        "welcome welcome-image"
+        "welcome-sentence-1 welcome-image"
+        "welcome-sentence-2 welcome-image"
+        "welcome-sentence-3 welcome-image"
+    ;
+}
+
+.p-home #s-welcome .welcome-word {
+    grid-area: welcome;
+    
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.p-home #s-welcome .welcome-sentence-1 {
+    grid-area: welcome-sentence-1;
+    max-width: 80%;
+}
+
+.p-home #s-welcome .welcome-sentence-2 {
+    grid-area: welcome-sentence-2;
+    max-width: 80%;
+}
+
+.p-home #s-welcome .welcome-sentence-3 {
+    grid-area: welcome-sentence-3;
+    max-width: 80%;
+}
+
+.p-home #s-welcome .welcome-image {
+    grid-area: welcome-image;
+    border-radius: 5px;
+}
+
+.p-resume #s-resumain {
+    margin: 4% 15% 4% 15%;
+    border: 2px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    padding: 3% 5% 3% 5%;
+
+    color: black;
+    font-size: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.p-resume #s-resumain .resume-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 1%;
+}
+
+.p-resume #s-resumain .contact-info {
+    font-size: 1rem;
+    color: grey;
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+.p-resume #s-resumain .resume-item-title {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-top: 4%;
+}
+
+.p-resume #s-resumain .resume-item-content {
+    font-weight: bold;
+    font-size: 1.4rem;
+    padding-left: 1%;
+    padding-top: 1.5%;
+}
+
+.p-resume #s-resumain .resume-item-dates {
+    font-style: italic;
+    font-size: 1.2rem;
+    padding-left: 2%;
+}
+
+.p-resume #s-resumain .resume-item-details {
+    font-size: 1.2rem;
+}
+
+.p-apps #s-apps {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-bottom: 4%;
+}
+
+.p-apps #s-apps .sample {
+    background-color: whitesmoke;
+    border: 2px;
+    border-radius: 5px;
+    padding: 3% 5% 3% 5%;
+    margin: 4% 15% 0% 15%;
+
+    color: black;
+    font-size: 1.5rem;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 0.5fr 1.5fr 1fr;
+    grid-template-areas:
+        "sample-title sample-image"
+        "sample-desc sample-image"
+        "sample-tech sample-image"
+    ;
+}
+
+.p-apps #s-apps .sample .sample-title {
+    grid-area: sample-title;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.p-apps #s-apps .sample .sample-image {
+    grid-area: sample-image;
+    border-radius: 5px;
+    align-self: center;
+}
+
+.p-apps #s-apps .sample .sample-desc {
+    grid-area: sample-desc;
+    max-width: 80%;
+}
+
+.p-apps #s-apps .sample .sample-tech {
+    grid-area: sample-tech;
+
+    font-size: 1.4rem;
+    color: #4d4d4d;
+    font-weight: bold;
+}
+
+.p-apps #s-apps .sample .sample-tech .tech-list {
+    font-size: 1.2rem;
+    color: black;
+    font-weight: normal;
+    margin-top: 1%;
+    margin-left: -3%;
+}
+
+.p-other #s-other-apps {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-bottom: 4%;
+}
+
+.p-other #s-other-apps .sample {
+    background-color: whitesmoke;
+    border: 2px;
+    border-radius: 5px;
+    padding: 3% 5% 3% 5%;
+    margin: 4% 15% 0% 15%;
+
+    color: black;
+    font-size: 1.5rem;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas:
+        "sample-title sample-image"
+        "sample-desc sample-image"
+    ;
+}
+
+.p-other #s-other-apps .sample .sample-title {
+    grid-area: sample-title;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.p-other #s-other-apps .sample .sample-image {
+    grid-area: sample-image;
+    border-radius: 5px;
+    align-self: center;
+}
+
+.p-other #s-other-apps .sample .sample-desc {
+    grid-area: sample-desc;
+    max-width: 80%;
+}
+
+@media screen and (max-width: 1000px) {
+    .g-details {
+        display: none;
+    }
+
+    .p-home #s-welcome {
+        font-size: 1.3rem;
+    }
+
+    .p-home #s-welcome .welcome-word {
+        font-size: 1.8rem;
+    }
+
+    .p-apps #s-apps .sample {
+        font-size: 1.3rem;
+    }
+
+    .p-other #s-other-apps .sample {
+        font-size: 1.3rem;
+    }
+
+    .p-apps #s-apps .sample .sample-title {
+        font-size: 1.8rem;
+    }
+
+    .p-other #s-other-apps .sample .sample-title {
+        font-size: 1.8rem;
+    }
+
+    .p-apps #s-apps .sample .sample-tech {
+        font-size: 1.2rem;
+    }
+
+    .p-apps #s-apps .sample .sample-tech .tech-list {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .p-home #s-welcome {
+        margin: 2% 10% 0% 10%;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .p-home #s-welcome div {
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+
+    .p-resume #s-resumain {
+        margin: 2% 10% 0% 10%;
+    }
+
+    .p-resume #s-resumain .resume-title {
+        font-size: 2rem;
+    }
+
+    .p-resume #s-resumain .contact-info {
+        font-size: 0.8rem;
+    }
+
+    .p-resume #s-resumain .resume-item-title {
+        font-size: 1.8rem;
+    }
+
+    .p-resume #s-resumain .resume-item-content {
+        font-size: 1.2rem;
+    }
+
+    .p-resume #s-resumain .resume-item-dates {
+        font-size: 1rem;
+    }
+
+    .p-resume #s-resumain .resume-item-details {
+        font-size: 1rem;
+    }
+    
+    .p-apps #s-apps .sample {
+        margin: 2% 10% 0% 10%;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .p-apps #s-apps .sample div {
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+
+    .p-other #s-other-apps .sample {
+        margin: 2% 10% 0% 10%;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .p-other #s-other-apps .sample div {
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .g-header {
+        border-top: 6px solid #93d1e9e8;
+        border-bottom: 6px solid #93d1e9e8;
+        background-color: #b3e9ecf5;
+
+        text-align: center;
+        font-size: 2.5rem;
+        font-family: "Lato", Helvetica, sans-serif;
+        padding-left: 0%;
+        width: 100%;
+
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .g-title {
+        background-color: #c6fbffcb;
+        padding: 0.5% 0% 0.5% 0%;
+        width: 100%;
+        color: darkblue;
+    }
+    
+    .g-not-title {
+        background-color: #aaf9ffab;
+        padding: 0.5% 0% 0.5% 0%;
+        width: 100%;
+        color: #2f2fac;
+        text-decoration: none;
+    }
+
+    .p-home #s-welcome {
+        margin: 1%;
+        border-radius: 15px;
+    }
+
+    .p-resume #s-resumain {
+        margin: 1%;
+        border-radius: 15px;
+    }
+
+    .p-apps #s-apps {
+        margin-bottom: 1%;
+    }
+
+    .p-apps #s-apps .sample {
+        margin: 1% 1% 0% 1%;
+        border-radius: 15px;
+    }
+
+    .p-other #s-other-apps {
+        margin-bottom: 1%;
+    }
+
+    .p-other #s-other-apps .sample {
+        margin: 1% 1% 0% 1%;
+        border-radius: 15px;
+    }
+}
