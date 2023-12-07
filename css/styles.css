@@ -325,6 +325,8 @@
     .p-home #s-welcome {
         margin: 2% 10% 0% 10%;
 
+        text-align: center;
+
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
